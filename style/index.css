@@ -1,0 +1,289 @@
+body {
+    display: block;
+    margin: 0%;
+    font-family :'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 30px 0 ;
+}
+
+.logoContainer{
+    width: 200px;
+    display: inline-block;
+}
+
+.logo{
+    width: 100%;
+}
+
+.linkContainer{
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.linkContainer li{
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.linkContainer li a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+
+.aboutUs{
+    margin: 80px 50px;
+    font-size: 30px;
+}
+.fixed-size1 {
+    width: 100%;
+    aspect-ratio: 5.5/4;
+}
+.Kaziranga{
+    margin: 80px 50px;
+    font-size: 30px;
+}
+.scrollContainer{
+    margin: 80px 50px;
+} 
+.weprovide{
+    margin: 80px 50px;
+}
+.fixed-size {
+    width: 100%;
+    aspect-ratio: 4/4;
+}
+
+
+.contactus{
+    margin:80px 50px;
+}
+
+.scrollContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scrollContainer h2{
+    margin-bottom: 40px;
+    margin-left: 30px;
+}
+
+
+.scroll {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.scroll div{
+    width: 300px;
+    margin: 50px;
+}
+
+.scroll img {
+    width: 100%;
+    aspect-ratio: 3.5/4;
+}
+
+#left, #right{
+    cursor: pointer;
+}
+
+h1 {
+    text-align: right;
+    font-size: 12px;
+    color: green
+}
+
+/* img{
+text-align:center;   
+} */
+
+h2 {
+    font-size: 30px;
+    color: #0bcdff;
+}
+
+h3 {
+    font-size: 28px;
+    color: #ffa500;
+}
+
+p {
+    font-size: 20px;
+}
+
+ /*.fcf-form-group {
+    font-family: -apple-system, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #00ff00;
+    text-align: left;
+}
+
+#fcf-form-id {
+    font-family: -apple-system, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #00ff00;
+    text-align: left; }*/
+
+*{
+    box-sizing: border-box;
+}
+
+form {
+    /* border: 2px dotted red; */
+    max-width: 600px;
+    margin: auto;
+    padding: 20px 50px;
+    background-color: or;
+
+    background-size: 100% 100%;
+    background-position: 0px 0px;
+    background-image: linear-gradient(90deg, rgb(0, 149, 255) 0%, rgb(132, 113, 255) 100%); 
+}
+
+.inputContainer {
+    /* border: 1px solid red; */
+    margin-top: 30px;
+}
+
+.inputContainer label {
+    margin-bottom: 14px;
+    font-weight: bold;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.buttomContainer {
+    margin-top: 20px;
+    font-size: 18px;
+    color:#ffa500;
+}
+
+.inputContainer input {
+    /* border: none; */
+    padding: 10px;
+    width: 100%;
+    margin: auto;
+    border-radius: 4px;
+}
+p a{
+    text-decoration: none;
+    color:red;
+    font-size: 24px;
+}
+h4{
+    text-align:center ;
+}
+
+
+
+
+
+
+@media screen and (min-width : 750px) and (max-width : 950px ) {
+ 
+    .navbar{
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width : 500px) and (max-width : 750px ) {
+ 
+    .navbar{
+        flex-direction: column;
+        padding: 30px 15px;
+    }
+
+    .linkContainer{
+        justify-content: space-between;
+        width: 450px;
+        /* margin: 0 30px; */
+    }
+
+    .linkContainer li{
+        margin: 0;
+        text-align: center;
+    }
+    
+    .linkContainer li a{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width : 500px) {
+ 
+    .navbar{
+        flex-direction: column;
+        padding: 30px 15px;
+    }
+
+    .linkContainer{
+        justify-content: space-between;
+        width: 95%;
+    }
+
+    .linkContainer li{
+        margin: 0;
+        text-align: center;
+    }
+    
+    .linkContainer li a{
+        font-size: 16px;
+    }
+
+
+     /*  *{ 
+        box-sizing: border-box;
+    }
+
+    
+        border: 2px dotted red;
+        max-width: 600px;
+        margin: auto;
+        padding: 20px 50px;
+        background-color: or;
+
+        background-size: 100% 100%;
+        background-position: 0px 0px;
+        background-image: linear-gradient(90deg, #A100FFFF 0%, #71C4FFFF 100%); 
+    }
+
+    .inputContainer {
+        border: 1px solid red;
+        margin-top: 30px;
+    }
+
+    .inputContainer label {
+        margin-bottom: 14px;
+        font-weight: bold;
+        display: block;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .inputContainer input {
+        /* border: none; 
+        padding: 10px;
+        width: 100%;
+        margin: auto;
+        border-radius: 4px;
+    }
+
+
+}*/
+ } 
