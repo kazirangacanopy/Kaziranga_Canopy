@@ -158,7 +158,37 @@
     </form> -->
             <!-- <a href="https://wa.me/+919678857695?text=Hlw"><img src="./whatsuplogo.jpg" style="width:50px ;background:green;"></a> -->
 
-            <script src="https://sheetdb.io/s/f/ua1ve0f67vc8a.js"></script>
+    <script src="https://sheetdb.io/s/f/ua1ve0f67vc8a.js"></script>
+
+    <div id="ReviewContainer">
+        <h3>Reviews</h3>
+        <div id="addreview">
+
+            <!-- <form id="reviewform">
+                <div class="inputContainer">
+                    <label for="Name">Your name</label>
+                    <input type="text" id="Name" name="Name" required>
+                </div>
+                <div class="inputContainer">
+                    <label for="Message">Review</label>
+                    <textarea id="Message" name="Message" rows="6" maxlength="3000" required> </textarea>
+                </div>
+                <div class="inputContainer">
+                    <label for="Stars">Rate Us</label>
+                    <input type="number" id="Stars" name="Stars" min="1" max="5" required>
+                </div>
+                <div class="buttomContainer">
+                    <button type="submit" class="btn">send</button>
+                </div>
+            </form> -->
+
+        </div>
+        <div id="reviews">
+
+        </div>
+
+    </div>
+
     <h3>For Any Query </h3>
     <p>+91 9678857695/+91 8474826896</p>
     <h3> Whatsapp now</h3>
@@ -173,5 +203,55 @@
 </div>
 </div>
 <script src="./js/form.js"></script> 
+<style>
+    .rev_date{
+        font-size: 12px;
+        color: #777;
+    }
+    .rev_name{
+        font-size: 16px;
+        color: #333;
+    }
+    .rev_comment{
+        font-size: 14px;
+        color: #555;
+    }
+    .rev_star{
+        font-size: 14px;
+        color: #555;
+    }
+</style>
+<script>
+
+window.addEventListener('DOMContentLoaded' , ()=>{
+    fetch("https://review-hj8b.onrender.com/" , {
+        method : "GET",
+        headers : {
+            "Content-Type" : "application/json"
+        }
+    }).then(res => res.json())
+    .then(data => {
+        data = data['data']
+        for(let i=0; i < data.length ; i++){
+            console.log(data[i]);
+            let stars = "";
+            for(let j=0 ; j < data[i].stars ; j++)
+                stars += "⭐";
+            document.getElementById('reviews').innerHTML += `
+            <div class="review">
+                <p class='rev_date'>${data[i].date}</p>
+                <p class='rev_name'>${data[i].name}</h4>
+                <p class='rev_comment'>${data[i].comment.slice(0,98)}</p>
+                <p class='rev_star'>${stars}</p>
+            </div>
+            `;
+        }
+    })
+    .catch(err => {
+        console.log(err);
+    })
+})
+
+</script>
 </body>
 </html>
