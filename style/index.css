@@ -494,7 +494,13 @@ h4 {
         text-align: left;
         flex-direction: column;
     }
-    
+  .subTitle{
+    padding-top: 20%;
+    padding-bottom: 20%;
+    margin-top: 20 px;
+    margin-bottom: 20 px ;
+
+  }
 }
 
 /* At width of 650px Change Services Image Height */
